@@ -5,7 +5,7 @@ tag @s add raycasting
 
 #запуск рейкаста от лица игрока
 execute anchored eyes positioned ^ ^ ^ run function scr:raycast_snowballs/raycast
-
+cooldown @s 200
 
 
 tag @s remove raycasting

@@ -10,6 +10,8 @@
 execute as @a[name=Scratch1337,scores={timer_fix=30..}] at @s run cparticle @a water_boom ~ ~ ~ 0 0 0 0
 scoreboard players reset @a[scores={timer_fix=30..}] timer_fix
 
+execute as @e[tag=under_water] at @s run tp @s ~ ~-.1 ~
+
 #Удочка
 execute as @e[tag=water_up,nbt={OnGround:1b}] at @s run damage @s 50 player_attack by @a[limit=1]
 

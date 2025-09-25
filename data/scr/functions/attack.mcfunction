@@ -11,7 +11,7 @@ execute at @s[tag=gifts,tag=!cooldown] unless block ~ ~ ~ farmland run function 
 
 execute at @s[tag=fish,tag=!cooldown] run function scr:items/fishing_rod
 
-execute at @s[tag=water_snowball] run function scr:raycast_snowballs/raycast_start
+execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:1}}},tag=!cooldown] run function scr:raycast_snowballs/raycast_start
 
 execute at @s[tag=lava_snowball] run function scr:raycast_snowballs2/raycast_start
 
