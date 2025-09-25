@@ -17,7 +17,7 @@ give @a yellow_dye{display:{Name:'{"text":"Палка-спасалка","color":
 give @a red_dye{display:{Name:'{"text":"Лавовая пушка","color":"dark_red","bold":true,"italic":false}',Lore:['{"text":"R → выстрел","color":"gray","italic":false}','{"text":"ЛКМ → поджигает цель","color":"gray","italic":false}']}} 1
 
 # Деревянный щит
-give @a brown_dye{display:{Name:'{"text":"Деревянный щит","color":"dark_gray","bold":true,"italic":false}',Lore:['{"text":"R → щиты","color":"gray","italic":false}','{"text":"ЛКМ → раздавить моба","color":"gray","italic":false}']}} 1
+give @a brown_dye{display:{Name:'{"text":"Деревянный щит","color":"dark_gray","bold":true,"italic":false}',Lore:['{"text":"ПКМ → щиты","color":"gray","italic":false}','{"text":"ЛКМ → раздавить моба","color":"gray","italic":false}']}} 1
 
 # Нагрудник бога
 give @a diamond_chestplate{display:{Name:'{"text":"Нагрудник Бога","italic":false,"color":"dark_purple","bold":true,"italic":false}'},Enchantments:[{lvl:10,id:blast_protection},{lvl:10,id:fire_protection},{lvl:1,id:mending},{lvl:10,id:projectile_protection},{lvl:10,id:protection},{lvl:10,id:thorns},{lvl:10,id:unbreaking}]} 1

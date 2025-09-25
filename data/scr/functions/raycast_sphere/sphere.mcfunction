@@ -15,7 +15,7 @@ execute at @s run summon block_display ~-0.25 ~ ~-0.25 {Passengers:[{id:"minecra
 timedt 100 'kill @e[type=item_display]'
 timedt 100 'kill @e[type=block_display]'
 timedt 100 'scale set pehkui:motion 1 @s'
-timedt 100 'scale set pehkui:knockback 5 @s'
+timedt 100 'scale set pehkui:knockback 1 @s'
 timedt 100 'execute at @s run tag @s remove shield'
 timedt 100 'execute at @s run particle poof ~ ~1 ~ .5 .5 .5 .1 100'
 timedt 100 'execute at @s run playsound minecraft:scr.magicstone ambient @a'
