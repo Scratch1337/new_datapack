@@ -1,6 +1,6 @@
 execute at @s[tag=lead,tag=!cooldown] run function scr:raycas_lead_l/raycast_start
 
-execute at @s[tag=stick] run function scr:items/stick_l
+execute at @s[tag=stick,tag=!cooldown] run function scr:items/stick_l
 
 execute at @s[tag=lava_gun] run function scr:raycast_lava_gun/raycast_start
 
