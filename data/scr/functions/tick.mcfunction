@@ -50,6 +50,10 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:brown_dye"}}] at @s run tag @s r
 
 # Посох Даров
 execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s add gifts
+#добавил быстрый рост растений когда держу посох в руках
+execute as @a[tag=gifts] at @s if block ~ ~ ~ farmland run gamerule randomTickSpeed 3000
+execute as @a[tag=gifts] at @s unless block ~ ~ ~ farmland run gamerule randomTickSpeed 3
+execute as @a[tag=!gifts] run gamerule randomTickSpeed 3
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s remove gifts
 
 # Удочка призыва

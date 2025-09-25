@@ -8,3 +8,5 @@ execute at @s run fill ~-5 ~ ~-5 ~5 ~1 ~5 minecraft:wheat replace
 execute at @s run setblock ~ ~-1 ~ water replace
 execute at @s run particle minecraft:enchant ~ ~1 ~ 1 1 1 0.5 200 force @a
 
+
+cooldown @s 200

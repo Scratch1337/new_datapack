@@ -6,7 +6,8 @@ execute at @s[tag=lava_gun] run function scr:raycast_lava_gun/raycast_start
 
 execute at @s[tag=shield] run function scr:raycast_sphere/raycast_start
 
-execute at @s[tag=gifts] run function scr:items/farmland
+#добавил кулдаун + проверку что я не на поле уже стою, чтобы нельзя было под себя копать и спамить
+execute at @s[tag=gifts,tag=!cooldown] unless block ~ ~ ~ farmland run function scr:items/farmland
 
 execute at @s[tag=fish] run function scr:items/fishing_rod
 
