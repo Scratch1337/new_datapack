@@ -1,4 +1,4 @@
-execute at @s[tag=lead] run function scr:raycas_lead/raycast_start
+execute at @s[tag=lead,tag=!cooldown] run function scr:raycas_lead/raycast_start
 
 execute at @s[tag=stick] run function scr:items/stick_r
 
