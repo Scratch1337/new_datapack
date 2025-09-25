@@ -1,0 +1,1 @@
+give @s minecraft:emerald_block{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}} 1

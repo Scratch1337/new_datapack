@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:gift",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          { "type": "item", "name": "minecraft:cod" },
+          { "type": "item", "name": "minecraft:salmon" },
+          { "type": "item", "name": "minecraft:pufferfish" },
+          { "type": "item", "name": "minecraft:tropical_fish" },
+          { "type": "item", "name": "wildlife:raw_bluegill" },
+          { "type": "item", "name": "wildlife:raw_rainbow_trout" },
+          { "type": "item", "name": "wildlife:raw_mantaray" },
+          { "type": "item", "name": "wildlife:raw_koi" },
+          { "type": "item", "name": "wildlife:raw_stingray" },
+          { "type": "item", "name": "wildlife:raw_goldfish" },
+          { "type": "item", "name": "wildlife:raw_anglerfish" },
+          { "type": "item", "name": "wildlife:raw_catfish" },
+          { "type": "item", "name": "wildlife:raw_bettafish" }
+        ]
+      }
+    ]
+  }
+  

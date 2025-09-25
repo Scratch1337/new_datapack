@@ -1,0 +1,9 @@
+article explosion ~ ~ ~ 0 0 0 0 5
+
+particle minecraft:flame ~ ~1 ~ .5 .5 .5 .1 100
+execute as @e[type=!player,distance=..9] at @s run data merge entity @s {Fire:200s,Health:5.0f}
+
+execute at @s run setblock ~ ~ ~ fire replace
+
+
+scoreboard players set .distance dist 200

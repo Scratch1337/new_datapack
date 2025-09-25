@@ -1,0 +1,7 @@
+data modify block -26 239 66 Items set value [{Slot:13b,id:"minecraft:diamond_hoe",Count:1b}]
+data modify block -26 238 66 Items set value [{Slot:13b,id:"minecraft:diamond_hoe",Count:1b}]
+data modify block -26 238 65 Items set value [{Slot:13b,id:"minecraft:diamond_hoe",Count:1b}]
+data modify block -26 238 64 Items set value [{Slot:13b,id:"minecraft:diamond_hoe",Count:1b}]
+data modify block -26 239 64 Items set value [{Slot:13b,id:"minecraft:diamond_hoe",Count:1b}]
+data modify block -26 238 76 Items set value [{Slot:13b,id:"minecraft:diamond_hoe",Count:1b}]
+data modify block -26 238 77 Items set value [{Slot:13b,id:"minecraft:diamond_hoe",Count:1b}]

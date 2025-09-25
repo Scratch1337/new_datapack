@@ -1,0 +1,1 @@
+scoreboard players set pen2_trigger memory 0
