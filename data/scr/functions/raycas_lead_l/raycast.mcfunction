@@ -4,7 +4,7 @@ execute as @e[type=!#scr:not_mob,tag=!raycasting,dx=0] positioned ~-0.99 ~-0.99 
 
 scoreboard players add .distance dist 1
 
-particle minecraft:dust 139 139 139 1 ~ ~ ~ 0 0 0 0 0
+particle minecraft:block bbs:chroma_black ~ ~-.25 ~ 0 0 0 0 0
 #particle minecraft:dust 0 0 0 0.05 ~ ~ ~ 0 0 0 0 1
 
 execute if score .distance dist matches ..1000 positioned ^ ^ ^0.05 rotated ~ ~ if block ~ ~ ~ #scr:raycast_pass run function scr:raycas_lead_l/raycast
