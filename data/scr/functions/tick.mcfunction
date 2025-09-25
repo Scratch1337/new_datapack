@@ -32,45 +32,29 @@ execute as @a[tag=fishing_rod_room] if data entity @s {Inventory:[{id:"minecraft
 execute as @a[tag=snowball_room] if data entity @s {Inventory:[{id:"minecraft:snowball",tag:{CustomModelData:1}}]} if data entity @s {Inventory:[{id:"minecraft:snowball",tag:{CustomModelData:2}}]} if data entity @s {Inventory:[{id:"minecraft:snowball",tag:{CustomModelData:3}}]} if data entity @s {Inventory:[{id:"minecraft:snowball",tag:{CustomModelData:4}}]} if data entity @s {Inventory:[{id:"minecraft:snowball",tag:{CustomModelData:5}}]} run function scr:snowballs/snowballs_finish
 
 # Лавовая пушка
-execute as @a[nbt={SelectedItem:{id:"minecraft:red_dye"}},tag=!lava_gun] at @s run function scr:bind
+# execute as @a[nbt={SelectedItem:{id:"minecraft:red_dye"}},tag=!lava_gun] at @s run function scr:bind
 execute as @a[nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run tag @s add lava_gun
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:red_dye"}},tag=lava_gun] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:red_dye"}},tag=lava_gun] at @s run function scr:delbuttons
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:red_dye"}}] at @s run tag @s remove lava_gun
 
 # Палка-спасалка
-execute as @a[nbt={SelectedItem:{id:"minecraft:yellow_dye"}},tag=!stick] at @s run function scr:bind
 execute as @a[nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] at @s run tag @s add stick
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:yellow_dye"}},tag=stick] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:yellow_dye"}},tag=stick] at @s run function scr:delbuttons
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:yellow_dye"}}] at @s run tag @s remove stick
 
 # Поводок притяжатель
-execute as @a[nbt={SelectedItem:{id:"minecraft:green_dye"}},tag=!lead] at @s run function scr:bind
 execute as @a[nbt={SelectedItem:{id:"minecraft:green_dye"}}] at @s run tag @s add lead
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:green_dye"}},tag=lead] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:green_dye"}},tag=lead] at @s run function scr:delbuttons
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:green_dye"}}] at @s run tag @s remove lead
 
 # Деревянный щит
-execute as @a[nbt={SelectedItem:{id:"minecraft:brown_dye"}},tag=!shield] at @s run function scr:bind
 execute as @a[nbt={SelectedItem:{id:"minecraft:brown_dye"}}] at @s run tag @s add shield
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:brown_dye"}},tag=shield] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:brown_dye"}},tag=shield] at @s run function scr:delbuttons
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:brown_dye"}}] at @s run tag @s remove shield
 
 # Посох Даров
-execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}},tag=!gifts] at @s run function scr:bind
 execute as @a[nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s add gifts
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:lime_dye"}},tag=gifts] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:lime_dye"}},tag=gifts] at @s run function scr:delbuttons
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s remove gifts
 
 # Удочка призыва
-execute as @a[nbt={SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true}'}}}},tag=!fish] at @s run function scr:bind
+
 execute as @a[nbt={SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true}'}}}}] at @s run tag @s add fish
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true}'}}}},tag=fish] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true}'}}}},tag=fish] at @s run function scr:delbuttons
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true}'}}}}] at @s run tag @s remove fish
 
 # Бесконечный изумрудный блок
@@ -80,51 +64,35 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Nam
 execute as @a[tag=infinite_emerald,nbt=!{Inventory:[{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}}]}] run give @s minecraft:emerald_block{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}} 1
 
 
+#Кнопка для броска снежка
+
+
+execute as @a[nbt={SelectedItem:{id:"minecraft:snowball"}},tag=!snowball_hand] at @s run function scr:skills_button
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball"}},tag=snowball_hand] at @s run function scr:delbuttons
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball"}},tag=snowball_hand] at @s run tag @s remove snowball_hand
+
 #Снежки
 # Водяной снежок
-execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:1}}},tag=!water_snowball] at @s run function scr:bind
-execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:1}}}] at @s run tag @s add water_snowball
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:1}}},tag=water_snowball] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:1}}},tag=water_snowball] at @s run function scr:delbuttons
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:1}}}] at @s run tag @s remove water_snowball
-execute as @a[tag=water_snowball] at @s run effect give @s water_breathing 2 0 true
-execute as @a[tag=!water_snowball] at @s run effect clear @s water_breathing
+execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:1}}}] at @s run effect give @s water_breathing 2 0 true
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:1}}}] at @s run effect clear @s water_breathing
 
 # Лавовый снежок
-execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}},tag=!lava_snowball] at @s run function scr:bind
-execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}}] at @s run tag @s add lava_snowball
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}},tag=lava_snowball] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}},tag=lava_snowball] at @s run function scr:delbuttons
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}}] at @s run tag @s remove lava_snowball
-execute as @a[tag=lava_snowball] at @s run effect give @s fire_resistance 2 0 true
-execute as @a[tag=!lava_snowball] at @s run effect clear fire_resistance
+execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}}] at @s run effect give @s fire_resistance 2 0 true
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}}] at @s run effect clear fire_resistance
 
 # Портальный снежок
-execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:3}}},tag=!portal_snowball] at @s run function scr:bind
-execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:3}}}] at @s run tag @s add portal_snowball
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:3}}},tag=portal_snowball] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:3}}},tag=portal_snowball] at @s run function scr:delbuttons
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:3}}}] at @s run tag @s remove portal_snowball
 
 
 # Снежок эндера
-execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}},tag=!ender_snowball] at @s run function scr:bind
-execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}}] at @s run tag @s add ender_snowball
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}},tag=ender_snowball] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}},tag=ender_snowball] at @s run function scr:delbuttons
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}}] at @s run tag @s remove ender_snowball
-execute as @a[tag=ender_snowball] at @s run effect give @s invisibility 2 0 true
-execute as @a[tag=!ender_snowball] at @s run effect clear @s invisibility
+execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}}] at @s run effect give @s invisibility 2 0 true
+execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}}] at @s run effect clear @s invisibility
 
 # Снежок крипера
-execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:5}}},tag=!creeper_snowball] at @s run function scr:bind
-execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:5}}}] at @s run tag @s add creeper_snowball
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:5}}},tag=creeper_snowball] at @s run function scr:delbind
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:5}}},tag=creeper_snowball] at @s run function scr:delbuttons
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:5}}}] at @s run tag @s remove creeper_snowball
-execute as @a[tag=creeper_snowball] at @s run execute as @e[type=minecraft:creeper, distance=..5] run data merge entity @s {ExplosionRadius:0}
-execute as @a[tag=creeper_snowball] at @s run execute as @e[type=creeper,distance=..5] run scoreboard players add @s creeper 1
-execute as @a[tag=creeper_snowball] at @s run execute as @e[scores={creeper=27},type=creeper,distance=..5] run function scr:creeper_tick
+
+execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:5}}}] at @s run execute as @e[type=minecraft:creeper,distance=..5] at @s run data merge entity @s {ExplosionRadius:0,Tags:["creeper_boom"]}
+execute as @e[tag=creeper_boom] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Duration:2s,Tags:["creeper_watch"]}
+execute as @e[type=minecraft:area_effect_cloud,tag=creeper_watch] at @s unless entity @e[type=minecraft:creeper,distance=..3] run function scr:creeper_tick
+
 # execute as @e[type=minecraft:creeper,team=Friends] at @s run effect give @s[team=Friends,distance=..5]
 
 function scr:emerald/mending

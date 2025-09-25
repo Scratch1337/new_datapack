@@ -1,11 +1,13 @@
 
 image @s 50 bg_btn.png "[w]-29.5" "[ty50]-[th50]+5" 100 20 "[th]*1.6" 0 0.5 0.5
-executeclient @s bind "/function scr:raycast_lava_gun/raycast_start" mouse.right SingleUse
+
 text @s 50 "§fЛавовый блок §b[ПКМ]" "[w]-[tw]-12" "[h]/2-[th]/2-15" 100 1 0 1 0.5
 
-# image @s 51 bg_btn.png "[w]-29.5" "[ty51]-[th51]+5" 100 20 "[th]*1.6" 0 0.5 0.5
-# executeclient @s bind "/execute at @s run function scr:raycast_vsel/raycast_start" v SingleUse
-# text @s 51 "§fКнопка 2  §b[V]" "[w]-[tw]-12" "[h]/2-[th]/2" 100 1 0 1 0.5
+tag @s[nbt={SelectedItem:{id:"minecraft:snowball"}}] add snowball_hand
+image @s[tag=snowball_hand] 51 bg_btn.png "[w]-29.5" "[ty51]-[th51]+5" 100 20 "[th]*1.6" 0 0.5 0.5
+text @s[tag=snowball_hand] 51 "§fКинуть снежок  §b[R]" "[w]-[tw]-12" "[h]/2-[th]/2" 100 1 0 1 0.5
+
+
 
 # image @s 52 bg_btn.png "[w]-29.5" "[ty52]-[th52]+5" 100 20 "[th]*1.6" 0 0.5 0.5
 # executeclient @s bind "/execute at @s run function scr:raycast_vsel/raycast_start" x SingleUse
