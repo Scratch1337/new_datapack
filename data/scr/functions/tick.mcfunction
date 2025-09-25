@@ -103,7 +103,9 @@ execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}}] at @s run effect clear fire_resistance
 
 # Портальный снежок
-
+execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}},team=!ender] at @s run team join ender @s
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}},team=ender] at @s run team leave @s
+execute as @a at @s run team join ender @e[type=enderman,distance=..32,team=!ender]
 
 # Снежок эндера
 execute as @a[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}}] at @s run effect give @s invisibility 2 0 true
