@@ -2,7 +2,7 @@ execute at @s[tag=lead,tag=!cooldown] run function scr:raycas_lead_l/raycast_sta
 
 execute at @s[tag=stick,tag=!cooldown] run function scr:items/stick_l
 
-execute at @s[tag=lava_gun] run function scr:raycast_lava_gun/raycast_start
+execute at @s[tag=lava_gun,tag=!cooldown] run function scr:raycast_lava_gun/raycast_start
 
 execute at @s[tag=shield] run function scr:raycast_sphere/raycast_start
 
