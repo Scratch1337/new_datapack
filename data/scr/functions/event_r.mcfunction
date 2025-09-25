@@ -13,4 +13,4 @@ execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:5}
 #Визуал бросания снежка + перезарядка при использовании + фикс чтобы не сбрасывалась перезарядка + звук бросания снежка
 execute at @s[nbt={SelectedItem:{id:"minecraft:snowball"}},tag=!cooldown] at @s run executeclient @s press key.attack click
 execute at @s[nbt={SelectedItem:{id:"minecraft:snowball"}},tag=!cooldown] run playsound minecraft:entity.snowball.throw ambient @a
-execute at @s[nbt={SelectedItem:{id:"minecraft:snowball"}},tag=!cooldown] at @s run cooldown @s 40
+execute at @s[nbt={SelectedItem:{id:"minecraft:snowball"}},tag=!cooldown] at @s run cooldown @s 120

@@ -23,4 +23,4 @@ execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:5}
 
 
 #Перезарядка снежка + фикс чтобы не сбрасывалась перезарядка
-execute at @s[nbt={SelectedItem:{id:"minecraft:snowball"}},tag=!cooldown] run cooldown @s 40
+execute at @s[nbt={SelectedItem:{id:"minecraft:snowball"}},tag=!cooldown] run cooldown @s 120
