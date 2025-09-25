@@ -66,3 +66,5 @@ scoreboard objectives add stage_carrot dummy
 scoreboard objectives add stage_potato dummy
 
 scoreboard objectives add knockback dummy
+
+scoreboard objectives add used_emerald_block used:emerald_block

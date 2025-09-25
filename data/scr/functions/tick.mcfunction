@@ -59,11 +59,17 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:
 
 # Бесконечный изумрудный блок
 # execute as @a[nbt={SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}}}] at @s run function scr:items/infinite_emerald_block
+
+
+
 execute as @a[nbt={SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}}}] run tag @s add infinite_emerald
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}}}] run execute at @a run timedt 1 'tag @s remove infinite_emerald'
-execute as @a[tag=infinite_emerald,nbt=!{Inventory:[{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}}]}] run give @s minecraft:emerald_block{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}} 1
 
+execute as @a[tag=infinite_emerald,scores={used_emerald_block=1..}] at @s run item replace entity @s weapon.mainhand with air
+execute as @a[tag=infinite_emerald,scores={used_emerald_block=1..}] at @s run item replace entity @s weapon.mainhand with minecraft:emerald_block{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}
 
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}}}] run tag @s remove infinite_emerald
+
+scoreboard players reset @a[scores={used_emerald_block=1..}] used_emerald_block
 #Кнопка для броска снежка
 
 
