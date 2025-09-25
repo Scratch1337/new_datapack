@@ -1,7 +1,7 @@
 
-image @s 50 bg_btn.png "[w]-29.5" "[ty50]-[th50]+5" 100 20 "[th]*1.6" 0 0.5 0.5
+# image @s 50 bg_btn.png "[w]-29.5" "[ty50]-[th50]+5" 100 20 "[th]*1.6" 0 0.5 0.5
 
-text @s 50 "§fЛавовый блок §b[ПКМ]" "[w]-[tw]-12" "[h]/2-[th]/2-15" 100 1 0 1 0.5
+# text @s 50 "§fЛавовый блок §b[ПКМ]" "[w]-[tw]-12" "[h]/2-[th]/2-15" 100 1 0 1 0.5
 
 tag @s[nbt={SelectedItem:{id:"minecraft:snowball"}}] add snowball_hand
 image @s[tag=snowball_hand] 51 bg_btn.png "[w]-29.5" "[ty51]-[th51]+5" 100 20 "[th]*1.6" 0 0.5 0.5
