@@ -16,7 +16,7 @@ execute as @a at @s run playsound bewitchment:entity.generic.teleport ambient @s
 
 execute as @a at @s run flash @s 0.1 1 0.5 0 0 0
 
-data modify block 56 233 55 Items set value [{Slot:13b,id:"minecraft:red_dye",Count:1b,tag:{display:{Name:'{"text":"Лавовая пушка","color":"dark_red","bold":true}',Lore:['{"text":"ПКМ → стреляет лавой","color":"gray"}','{"text":"ЛКМ → поджигает цель","color":"gray"}']}}}]
+data modify block 56 233 55 Items set value [{Slot:13b,id:"minecraft:red_dye",Count:1b,tag:{display:{Name:'{"text":"Лавовая пушка","color":"dark_red","bold":true,"italic":false}',Lore:['{"text":"ПКМ → стреляет лавой","color":"gray","italic":false}','{"text":"ЛКМ → поджигает цель","color":"gray","italic":false}']}}}]
 
 
 tp @a 58.42 220.00 59.49

@@ -1,5 +1,5 @@
 tellraw @a {"text":"✔ Вы справились с заданием и получили Поводок притяжатель!","color":"green"}
-give @a green_dye{display:{Name:'{"text":"Поводок притяжатель","color":"aqua","bold":true}',Lore:['{"text":"ПКМ → притянуть моба","color":"gray"}','{"text":"ЛКМ → 10 урона","color":"gray"}']}} 1
+give @a green_dye{display:{Name:'{"text":"Поводок притяжатель","color":"aqua","bold":true,"italic":false}',Lore:['{"text":"ПКМ → притянуть моба","color":"gray","italic":false}','{"text":"ЛКМ → 10 урона","color":"gray","italic":false}']}} 1
 
 execute as @e[type=#scr:animals,tag=animals_pen] at @s run particle minecraft:cloud ~ ~1 ~ 0.5 0.5 0.5 0.05 200
 

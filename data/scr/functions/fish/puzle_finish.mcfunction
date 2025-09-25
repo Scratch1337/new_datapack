@@ -12,7 +12,7 @@ setblock 15 223 64 minecraft:iron_door[facing=north,half=upper,hinge=left]
 
 playsound minecraft:block.iron_door.open master @a 15 222 63 1 1
 
-execute as @e[type=text_display,tag=fish_text,limit=1] run data modify entity @s text set value '{"text":"ЗАДАНИЕ ВЫПОЛНЕНО!","color":"gold","bold":true}'
+execute as @e[type=text_display,tag=fish_text,limit=1] run data modify entity @s text set value '{"text":"ЗАДАНИЕ ВЫПОЛНЕНО!","color":"gold","bold":true,"italic":false}'
 
 execute at @e[type=item_frame,tag=quest1_frame] run particle minecraft:cloud ~ ~ ~ 0.3 0.3 0.3 0.05 20
 execute at @e[type=item_frame,tag=quest2_frame] run particle minecraft:cloud ~ ~ ~ 0.3 0.3 0.3 0.05 20

@@ -1,6 +1,6 @@
 tellraw @a {"text":"Испытание пройдено! Вы получаете Посох Даров!","color":"green"}
 
-give @a lime_dye{display:{Name:'{"text":"Посох Даров","color":"gold","bold":true}',Lore:['{"text":"ПКМ → случайный предмет","color":"gray"}','{"text":"ЛКМ → поле 10x10 пшеницы","color":"gray"}']}} 1
+give @a lime_dye{display:{Name:'{"text":"Посох Даров","color":"gold","bold":true,"italic":false}',Lore:['{"text":"ПКМ → случайный предмет","color":"gray","italic":false}','{"text":"ЛКМ → поле 10x10 пшеницы","color":"gray","italic":false}']}} 1
 
 
 particle minecraft:totem_of_undying -81 238 70.5 1 1 1 0.1 200 force

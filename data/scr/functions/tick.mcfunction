@@ -36,7 +36,7 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:iron_chestplate"}}] at @s run e
 execute as @a[tag=torch_room] if data entity @s {Inventory:[{id:"minecraft:red_dye"}]} at @s run function scr:torch/torch_finish
 execute as @a[tag=stick_room] if data entity @s {Inventory:[{id:"minecraft:yellow_dye"}]} at @s run function scr:stick/stick_finish
 execute as @a[tag=emerald_room] if data entity @s {Inventory:[{id:"minecraft:enchanted_book",tag:{StoredEnchantments:[{id:"minecraft:mending"}]}}]} at @s run function scr:emerald/mending_found
-execute as @a[tag=fishing_rod_room] if data entity @s {Inventory:[{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true}'}}}]} at @s run function scr:fish/fishing_rod
+execute as @a[tag=fishing_rod_room] if data entity @s {Inventory:[{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true,"italic":false}'}}}]} at @s run function scr:fish/fishing_rod
 execute as @a[tag=snowball_room] if data entity @s {Inventory:[{id:"minecraft:snowball",tag:{CustomModelData:1}}]} if data entity @s {Inventory:[{id:"minecraft:snowball",tag:{CustomModelData:2}}]} if data entity @s {Inventory:[{id:"minecraft:snowball",tag:{CustomModelData:3}}]} if data entity @s {Inventory:[{id:"minecraft:snowball",tag:{CustomModelData:4}}]} if data entity @s {Inventory:[{id:"minecraft:snowball",tag:{CustomModelData:5}}]} run function scr:snowballs/snowballs_finish
 
 # Лавовая пушка
@@ -66,24 +66,24 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s re
 
 # Удочка призыва
 
-execute as @a[nbt={SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true}'}}}}] at @s run tag @s add fish
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true}'}}}}] at @s run tag @s remove fish
+execute as @a[nbt={SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true,"italic":false}'}}}}] at @s run tag @s add fish
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true,"italic":false}'}}}}] at @s run tag @s remove fish
 
 #Убираем стандарт механику удочки
 execute as @a[tag=fish] at @s run tag @s add nointeraction
 execute as @a[tag=!fish] at @s run tag @s remove nointeraction
 
 # Бесконечный изумрудный блок
-# execute as @a[nbt={SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}}}] at @s run function scr:items/infinite_emerald_block
+# execute as @a[nbt={SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true,"italic":false}'}}}}] at @s run function scr:items/infinite_emerald_block
 
 
 
-execute as @a[nbt={SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}}}] run tag @s add infinite_emerald
+execute as @a[nbt={SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true,"italic":false}'}}}}] run tag @s add infinite_emerald
 
 execute as @a[tag=infinite_emerald,scores={used_emerald_block=1..}] at @s run item replace entity @s weapon.mainhand with air
-execute as @a[tag=infinite_emerald,scores={used_emerald_block=1..}] at @s run item replace entity @s weapon.mainhand with minecraft:emerald_block{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}
+execute as @a[tag=infinite_emerald,scores={used_emerald_block=1..}] at @s run item replace entity @s weapon.mainhand with minecraft:emerald_block{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true,"italic":false}'}}
 
-execute as @a[nbt=!{SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}}}] run tag @s remove infinite_emerald
+execute as @a[nbt=!{SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true,"italic":false}'}}}}] run tag @s remove infinite_emerald
 
 scoreboard players reset @a[scores={used_emerald_block=1..}] used_emerald_block
 #Кнопка для броска снежка

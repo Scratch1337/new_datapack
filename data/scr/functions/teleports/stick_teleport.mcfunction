@@ -15,7 +15,7 @@ execute at @a run timedt 8 'tellraw @a {"text":"Ваша цель — найти
 execute at @a run timedt 5 'playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~ 999999999 1.2'
 execute at @a run timedt 8 'playsound minecraft:entity.experience_orb.pickup master @a ~ ~ ~ 999999999 1.2'
 
-data modify block -14 248 155 Items set value [{Slot:13b,id:"minecraft:yellow_dye",Count:1b,tag:{display:{Name:'{"text":"Палка-спасалка","color":"yellow","bold":true}',Lore:['{"text":"ПКМ → подброс вверх","color":"gray"}','{"text":"ЛКМ → откинуть врагов на 30 блоков","color":"gray"}']}}}]
+data modify block -14 248 155 Items set value [{Slot:13b,id:"minecraft:yellow_dye",Count:1b,tag:{display:{Name:'{"text":"Палка-спасалка","color":"yellow","bold":true,"italic":false}',Lore:['{"text":"ПКМ → подброс вверх","color":"gray","italic":false}','{"text":"ЛКМ → откинуть врагов на 30 блоков","color":"gray","italic":false}']}}}]
 
 
 tp @a -21.68 261.00 166.20

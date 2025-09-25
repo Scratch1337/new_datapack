@@ -9,7 +9,7 @@ execute at @s run playsound minecraft:entity.player.levelup master @a ~ ~ ~ 1 1
 effect give @s minecraft:glowing 100 0 true
 effect give @s minecraft:regeneration 4 1 true
 
-give @a minecraft:emerald_block{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}} 1
+give @a minecraft:emerald_block{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true,"italic":false}'}} 1
 
 playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 999999 1
 

@@ -22,7 +22,7 @@ execute as @e[type=villager,tag=cantake,limit=1] run data merge entity @s {Villa
 tellraw @a {"text":"✔ Вы справились с заданием и получили Деревянный щит!","color":"green"}
 playsound minecraft:ui.toast.challenge_complete master @a ~ ~ ~ 999999 1
 
-give @a brown_dye{display:{Name:'{"text":"Деревянный щит","color":"dark_gray","bold":true}',Lore:['{"text":"ПКМ → сфера 5x5 из досок","color":"gray"}','{"text":"ЛКМ → клетка 3x3 для моба","color":"gray"}']}} 1
+give @a brown_dye{display:{Name:'{"text":"Деревянный щит","color":"dark_gray","bold":true,"italic":false}',Lore:['{"text":"ПКМ → щиты","color":"gray","italic":false}','{"text":"ЛКМ → раздавить моба","color":"gray","italic":false}']}} 1
 
 
 timedt 10 'function scr:markers/marker'
