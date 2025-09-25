@@ -1,9 +1,11 @@
 #particle explosion ~ ~ ~ 0 0 0 0 5
 
-kill @s
 
-execute as @e[type=!player,limit=1,sort=nearest,tag=raycast_hit] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 lava replace air
+execute at @s[type=!player] run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 lava keep
+
 playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 1
+playsound block.lava.extinguish master @a ~ ~ ~ 1 1
+playsound block.lava.pop master @a ~ ~ ~ 1 1
 
 
 

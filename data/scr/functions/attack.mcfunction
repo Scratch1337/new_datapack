@@ -13,11 +13,11 @@ execute at @s[tag=fish,tag=!cooldown] run function scr:items/fishing_rod
 
 execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:1}}},tag=!cooldown] run function scr:raycast_snowballs/raycast_start
 
-execute at @s[tag=lava_snowball] run function scr:raycast_snowballs2/raycast_start
+execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}},tag=!cooldown] run function scr:raycast_snowballs2/raycast_start
 
-execute at @s[tag=portal_snowball] run function scr:snowballs/portal_l
+execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:3}}},tag=!cooldown] run function scr:snowballs/portal_l
 
-execute at @s[tag=ender_snowball] run function scr:raycast_eat/raycast_start
+execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:4}}},tag=!cooldown] run function scr:raycast_eat/raycast_start
 
 execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:5}}},tag=!cooldown] run function scr:snowballs/creeper_l
 

@@ -1,6 +1,7 @@
 execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:1}}},tag=!cooldown] run function scr:snowballs/water_s
 
-execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}},tag=!cooldown] run function scr:snowballs/lava
+execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}},tag=!cooldown] run fireball 5 minecraft:fire_charge
+execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:2}}},tag=!cooldown] run cooldown @s 150
 
 execute at @s[nbt={SelectedItem:{id:"minecraft:snowball",tag:{CustomModelData:3}}},tag=!cooldown] run function scr:snowballs/portal
 

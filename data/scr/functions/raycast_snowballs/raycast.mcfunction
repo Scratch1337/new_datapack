@@ -11,7 +11,7 @@ execute if score .distance dist matches ..1000 positioned ^ ^ ^0.05 rotated ~ ~ 
 
 
 #если попал в любой блок
-# execute if score .distance dist matches ..1000 positioned ^ ^ ^0.05 rotated ~ ~ run function scr:raycast_snowballs/collide_block
+execute if score .distance dist matches ..1000 positioned ^ ^ ^0.05 rotated ~ ~ run function scr:raycast_snowballs/collide_block
 
 
 #если попал в какой-то блок определенный
