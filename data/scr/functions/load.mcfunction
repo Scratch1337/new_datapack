@@ -68,3 +68,4 @@ scoreboard objectives add stage_potato dummy
 scoreboard objectives add knockback dummy
 
 scoreboard objectives add used_emerald_block used:emerald_block
+scoreboard objectives add timer_fix custom:play_time

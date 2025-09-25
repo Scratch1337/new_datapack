@@ -6,6 +6,12 @@
 #execute as @e[type=snowball] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Duration:2s,Tags:["explosion_watcher"]}
 #execute as @e[type=minecraft:area_effect_cloud,tag=explosion_watcher] at @s unless entity @e[type=minecraft:snowball,distance=..3] run summon tnt ~ ~ ~ {Fuze:0b}
 
+#Фикс бага 3д эффекта (использовать только с ToonWater, с остальными все норм)
+execute as @a[name=Scratch1337,scores={timer_fix=30..}] at @s run cparticle @a water_boom ~ ~ ~ 0 0 0 0
+scoreboard players reset @a[scores={timer_fix=30..}] timer_fix
+
+#Удочка
+execute as @e[tag=water_up,nbt={OnGround:1b}] at @s run damage @s 50 player_attack by @a[limit=1]
 
 # execute as @a at @s run function scr:interact/raycast_start 
 execute as @a at @s[tag=torch_room] run particle minecraft:ash ~ ~1 ~ 1 1 1 0.001 10 force
@@ -60,6 +66,10 @@ execute as @a[nbt=!{SelectedItem:{id:"minecraft:lime_dye"}}] at @s run tag @s re
 
 execute as @a[nbt={SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true}'}}}}] at @s run tag @s add fish
 execute as @a[nbt=!{SelectedItem:{id:"minecraft:fishing_rod",tag:{display:{Name:'{"text":"Удочка призыва","color":"dark_purple","bold":true}'}}}}] at @s run tag @s remove fish
+
+#Убираем стандарт механику удочки
+execute as @a[tag=fish] at @s run tag @s add nointeraction
+execute as @a[tag=!fish] at @s run tag @s remove nointeraction
 
 # Бесконечный изумрудный блок
 # execute as @a[nbt={SelectedItem:{id:"minecraft:emerald_block",tag:{display:{Name:'{"text":"Бесконечный изумрудный блок","color":"green","bold":true}'}}}}] at @s run function scr:items/infinite_emerald_block
